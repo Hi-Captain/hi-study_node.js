@@ -18,12 +18,14 @@ html {
 body {
   font-size: 1.6rem;
   text-align: center;
+  height: 100%;
 }
 
 nav {
   background: #66a1f4;
   padding: 1rem;
   text-align: center;
+  height: 4rem;
 }
 
 nav a{
@@ -33,4 +35,200 @@ nav a{
 
 section{
   padding: 3rem;
+}
+
+/* Main Page */
+.main{
+  padding-top: 10rem;
+  font-size: 2.4rem;
+}
+
+/* Courses Page */
+.courses{
+  margin-top: 5rem
+}
+
+.list{
+  width: 33rem;
+  height: 50rem;
+  border: 1px solid #66a1f4;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: left;
+  overflow: hidden;
+}
+
+.refresh, .create{
+  background: #66a1f4;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition-duration: .2s;
+  display: block;
+  line-height: 4.1rem;
+  text-align: center;
+  outline: none;
+}
+.refresh{
+  border-bottom: 1px solid #66a1f4;
+}
+.create{
+  border-top: 1px solid #66a1f4;
+}
+.refresh:hover,
+.create:hover{
+  background: #fff;
+  color: #66a1f4;
+}
+
+.list-container{
+  background-color: #fefefe;
+  padding: 1rem 2rem;
+  height: calc(100% - 8rem);
+  overflow: auto;
+}
+
+.list-container a{
+  display: block;
+  border-bottom: 1px solid #999;
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition-duration: .2s;
+  height: 4.3rem;
+  line-height: 2.7rem;
+}
+
+.list-container a:last-child{
+  border-bottom: none;
+}
+
+.list-container a:hover{
+  padding-left: 2rem;
+}
+
+/* Course Page */
+.course{
+  width: 33rem;
+  height: 50rem;
+  border: 1px solid #66a1f4;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 8rem;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  padding: 4rem 0;
+}
+
+.edit-btn,
+.del-btn{
+  background: #66a1f4;
+  border: none;
+  width: 100%;
+  height: 4rem;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition-duration: .2s;
+  display: block;
+  line-height: 4.1rem;
+  text-align: center;
+  position: absolute;
+  outline: none;
+}
+.edit-btn{
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #66a1f4;
+}
+.edit-btn:hover{
+  background-color: #fff;
+  color: #66a1f4;
+}
+.del-btn{
+  bottom: 0;
+  left: 0;
+}
+.del-btn:hover{
+  background-color: red;
+}
+
+.course-container{
+  padding: 7rem 2rem 8rem;
+  height: 100%;
+  word-break: keep-all;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.course-container > *{
+  text-align: center;
+}
+/* Edit && New Page */
+.edit,
+.new{
+  width: 50rem;
+  height: 30rem;
+  border: 1px solid #66a1f4;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 8rem;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  padding: 4.6rem 5rem 4rem;
+}
+
+.edit > div,
+.new > div{
+  margin-bottom: 2rem;
+}
+.edit span,
+.new span{
+  display: inline-block;
+  width: 10rem;
+  font-size: 2.3rem;
+  text-align: right;
+  margin-right: 2rem;
+}
+.edit input,
+.new input{
+  width: 27.8rem;
+  font-size: 2rem;
+  height: 4rem;
+  padding: 1rem;
+}
+
+.edit .edit-confirm,
+.new .add-confirm{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #66a1f4;
+  border: none;
+  border-top: 1px solid #66a1f4;
+  height: 4rem;
+  color: #fff;
+  font-size: 1.4rem;
+  transition-duration: .2s;
+  cursor: pointer;
+  outline: none;
+}
+.edit-confirm:hover,
+.add-confirm:hover{
+  color: #66a1f4;
+  background-color: #fff;
+}
+.edit-confirm[disabled],
+.add-confirm[disabled]{
+  cursor: not-allowed;
+  color: red;
+  background: none;
 }
