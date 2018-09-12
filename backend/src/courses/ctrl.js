@@ -37,12 +37,14 @@ exports.edit = (ctx) => {
 
 exports.delete = (ctx) => {
   const courseId = ctx.params.id
-  const blockId = [1, 4, 5]
+  console.log(courseId)
+  const blockId = ['1', '4', '5']
   const getCourse = serverDB.filter(function(course){return course.id == courseId})[0]
+  console.log(blockId.indexOf(courseId))
   if(blockId.indexOf(courseId) > -1 ){
+    return ctx.throw(500)
+  } else {
     serverDB.splice(serverDB.indexOf(getCourse), 1)
     ctx.body = serverDB
-  } else {
-    return ctx.throw(500)
   }
 }
